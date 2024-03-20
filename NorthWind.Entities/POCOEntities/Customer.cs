@@ -10,5 +10,6 @@ namespace NorthWind.Entities.POCOEntities
     {
         public string Id { get; set; }
         public string Name { get; set; }
+
     }
 }
