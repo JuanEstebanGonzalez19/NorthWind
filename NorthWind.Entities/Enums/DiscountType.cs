@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Entities.Enums
 {
-    public enum ShippingType
+    public enum DiscountType
     {
-        Sea, Air, Rail, Road
+        Flat, Percentage
     }
 }
