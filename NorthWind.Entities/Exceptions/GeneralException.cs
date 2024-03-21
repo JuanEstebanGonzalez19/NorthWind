@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Entities.Exceptions
 {
-    public class GeneralException
+    public class GeneralException : Exception
     {
-        public string Details { get; set; }
+        public string Detail { get; set; }
         public GeneralException() { }
         public GeneralException(string message) : base(message){ }
         public GeneralException(string message, 
-            Exception innerException) : base(
-                message, innerException) { }
+            Exception innerException) : base(message, innerException) { }
+        public GeneralException(string title, string detail) :
+            base(title)=> Detail = detail;
     }
 }
