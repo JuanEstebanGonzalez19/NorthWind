@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthWind.UseCasesDTOs
+namespace NorthWind.UseCasesDTOs.CreateOrder
 {
-    internal class CreateOrderDetailParams
+    public class CreateOrderDetailParams
     {
+        public string ProductId { get; set; }
+        public decimal UnitPrice { get; set; }
+        public short Quantity { get; set; }
     }
 }
