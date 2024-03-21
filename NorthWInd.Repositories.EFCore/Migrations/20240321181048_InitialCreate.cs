@@ -64,33 +64,33 @@ namespace NorthWind.Repositories.EFCore.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
+/////////////////////////////////////////////////////////////////////
             migrationBuilder.CreateTable(
-                name: "OrderDetails",
-                columns: table => new
-                {
-                    OrderId = table.Column<int>(type: "int", nullable: false),
-                    ProductId = table.Column<string>(type: "nchar(5)", nullable: false),
-                    UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Quantity = table.Column<short>(type: "smallint", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_OrderDetails", x => new { x.OrderId, x.ProductId });
-                    table.ForeignKey(
-                        name: "FK_OrderDetails_Customers_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Customers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_OrderDetails_Orders_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "Orders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
+    name: "OrderDetails",
+    columns: table => new
+    {
+        OrderId = table.Column<int>(type: "int", nullable: false),
+        ProductId = table.Column<string>(type: "nchar(5)", nullable: false),
+        UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+        Quantity = table.Column<short>(type: "smallint", nullable: false)
+    },
+    constraints: table =>
+    {
+        table.PrimaryKey("PK_OrderDetails", x => new { x.OrderId, x.ProductId });
+        table.ForeignKey(
+            name: "FK_OrderDetails_Customers_ProductId",
+            column: x => x.ProductId,
+            principalTable: "Customers",
+            principalColumn: "Id",
+            onDelete: ReferentialAction.Cascade); // Deja esta eliminación en cascada si es necesario
+        table.ForeignKey(
+            name: "FK_OrderDetails_Orders_OrderId",
+            column: x => x.OrderId,
+            principalTable: "Orders",
+            principalColumn: "Id",
+            onDelete: ReferentialAction.Restrict); // Cambia a NO ACTION o NO CASCADE según tu necesidad
+    });
+/////////////////////////////////////////////////////////////////////
             migrationBuilder.InsertData(
                 table: "Customers",
                 columns: new[] { "Id", "Name" },

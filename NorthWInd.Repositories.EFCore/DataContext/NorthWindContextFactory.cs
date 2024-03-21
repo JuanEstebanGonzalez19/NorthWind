@@ -17,7 +17,7 @@ namespace NorthWind.Repositories.EFCore.DataContext
             var OptionsBuilder =
                 new DbContextOptionsBuilder<NorthWindContext>();
             OptionsBuilder.UseSqlServer(
-                "Serve = (localdb) \\ mssqllocaldb;Database=NorthWindDB");
+                "Server = (localdb)\\MSSQLLocalDB;Database=NorthWindDB");
             return new NorthWindContext(OptionsBuilder.Options);
         }
     } 

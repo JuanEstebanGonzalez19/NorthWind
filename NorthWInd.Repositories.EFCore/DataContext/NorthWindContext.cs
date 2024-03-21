@@ -59,6 +59,9 @@ namespace NorthWind.Repositories.EFCore.DataContext
 
             modelBuilder.Entity<OrderDetail>()
               .HasKey(od => new { od.OrderId, od.ProductId });
+            modelBuilder.Entity<OrderDetail>()
+              .Property(od => od.UnitPrice)
+              .HasColumnType("decimal(18, 2)");
 
             modelBuilder.Entity<Order>()
                 .HasOne<Customer>()

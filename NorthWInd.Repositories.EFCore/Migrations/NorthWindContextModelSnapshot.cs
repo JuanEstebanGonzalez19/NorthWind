@@ -121,7 +121,7 @@ namespace NorthWind.Repositories.EFCore.Migrations
                         .HasColumnType("smallint");
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("OrderId", "ProductId");
 

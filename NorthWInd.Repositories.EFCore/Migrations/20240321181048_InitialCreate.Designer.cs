@@ -12,7 +12,7 @@ using NorthWind.Repositories.EFCore.DataContext;
 namespace NorthWind.Repositories.EFCore.Migrations
 {
     [DbContext(typeof(NorthWindContext))]
-    [Migration("20240321171559_InitialCreate")]
+    [Migration("20240321181048_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -124,7 +124,7 @@ namespace NorthWind.Repositories.EFCore.Migrations
                         .HasColumnType("smallint");
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("OrderId", "ProductId");
 
