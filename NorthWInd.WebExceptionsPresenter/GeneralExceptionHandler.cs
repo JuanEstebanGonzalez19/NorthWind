@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.WebExceptionsPresenter
 {
-    public class GeneralExceptionHandler : ExceptionHandlerBase, IExceptionHandler
+    public class GeneralExceptionHandler: ExceptionHandlerBase, IExceptionHandler
     {
         public Task Handle(ExceptionContext context) 
         {
@@ -18,9 +18,11 @@ namespace NorthWind.WebExceptionsPresenter
                 Exception.Message, Exception.Detail);
         }
 
+        ///////Esto de abajo no va en el codigo ///////
         public Task Handler(ExceptionContext context)
         {
             throw new NotImplementedException();
         }
+        //////////////////////////////////////////////
     }
 }
