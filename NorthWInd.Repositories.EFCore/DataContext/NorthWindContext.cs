@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Repositories.EFCore.DataContext
 {
-    public class NorthWindContext : DbContext
+    public class NorthWindContext: DbContext
     {
         public NorthWindContext(
             DbContextOptions<NorthWindContext> options) : 
