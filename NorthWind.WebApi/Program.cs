@@ -21,7 +21,6 @@ builder.Services.AddControllers(options =>
                 }
             )));
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-
 // Agregar servicios personalizados de NorthWind
 builder.Services.AddNorthWindServices(builder.Configuration);
 
