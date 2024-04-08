@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Controllers\NorthWind.Controllers.csproj" />
+    <ProjectReference Include="..\NorthWind.IoC\NorthWind.IoC.csproj" />
+    <ProjectReference Include="..\NorthWInd.WebExceptionsPresenter\NorthWind.WebExceptionsPresenter.csproj" />
+  </ItemGroup>
+
 </Project>

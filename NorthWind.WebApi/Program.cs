@@ -12,14 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
 
 // Add services to the container.
-builder.Services.AddControllers(options =>
+builder.Services.AddControllers(/*options =>
             options.Filters.Add(new ApiExceptionFilterAttribute(
                 new Dictionary<Type, IExceptionHandler>
                 {
                     {typeof(GeneralException), new GeneralExceptionHandler()},
                     {typeof(ValidationException), new ValidationExceptionHandler()},
                 }
-            )));
+            ))*/ Filters.Register);
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 // Agregar servicios personalizados de NorthWind
 builder.Services.AddNorthWindServices(builder.Configuration);
