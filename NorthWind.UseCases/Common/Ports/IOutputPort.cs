@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NorthWind.UseCases.Common.Ports
 {
-    internal interface IOutputPort
+    public interface IOutputPort<InteractorResponseType>
     {
+        void Handle(InteractorResponseType response);
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace NorthWind.UseCases.Common.Ports
 {
-    internal interface IInputPort
+    public interface IInputPort<InteractorRequestType, InteractorResponseType>
     {
+        public InteractorRequestType RequestData { get;}
+        public IOutputPort<InteractorResponseType> OutputPort { get;}
     }
 }
