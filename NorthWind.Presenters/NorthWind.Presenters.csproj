@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.UseCases\NorthWind.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>
