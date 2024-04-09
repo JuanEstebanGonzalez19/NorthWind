@@ -7,7 +7,6 @@ using NorthWind.UseCasesDTOs.CreateOrder;
 using NorthWind.UseCasesPorts.CreateOrder;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading;
